@@ -1,7 +1,7 @@
 1：The call permission required by the interface
 "android.permission.CLOUDPOS_SYS_UPDATE"
 2：interface specification
-package com.cloudpos.possys.aidl;
+package com.wizarpos.possys.aidl;
 interface IPosSystemService{
 	/**
 	*	@filePath	:firmware file path.
