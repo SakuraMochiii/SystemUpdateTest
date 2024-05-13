@@ -1,4 +1,4 @@
-package com.wizarpos.util;
+package com.cloudpos.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -98,11 +98,11 @@ public class SystemUtil {
      * 查看是否是eng版本的系统。
      */
     public static boolean checkPosVersion() {
-//		com.wizarpos.android.core.util.POSSecurity.requireCheckCert()
+//		com.cloudpos.android.core.util.POSSecurity.requireCheckCert()
         boolean isVerify = false;
         try {
 //			获得反射对象的类,加载指定的类
-            Class<?> pOSSecurity = Class.forName("com.wizarpos.android.core.util.POSSecurity");
+            Class<?> pOSSecurity = Class.forName("com.cloudpos.android.core.util.POSSecurity");
             Object resultObj = pOSSecurity.getMethod("requireCheckCert").invoke(pOSSecurity);
             Log.d(LOG_TAG, "checkPosVersion : resultObj = " + resultObj);
             if (resultObj != null) {

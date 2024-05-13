@@ -5,7 +5,7 @@ android {
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "com.wizarpos.activity"
+        applicationId "com.cloudpos.activity"
         minSdkVersion 19
         targetSdkVersion 28
     }

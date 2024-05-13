@@ -1,4 +1,4 @@
-package com.wizarpos.util;
+package com.cloudpos.util;
 
 import android.util.Log;
 

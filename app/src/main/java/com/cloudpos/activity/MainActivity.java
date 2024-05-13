@@ -1,4 +1,4 @@
-package com.wizarpos.activity;
+package com.cloudpos.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -15,11 +15,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.wizarpos.mgr.AidlMgr;
+import com.cloudpos.mgr.AidlMgr;
+import com.cloudpos.util.TextViewUtil;
 import com.wizarpos.possys.aidl.IPosSystemService;
-import com.wizarpos.util.TextViewUtil;
 
-public class MainActivity extends com.wizarpos.activity.ConstantActivity implements OnClickListener {
+public class MainActivity extends com.cloudpos.activity.ConstantActivity implements OnClickListener {
     public static final String TAG = "MainActivity";
 
     @Override
@@ -106,7 +106,6 @@ public class MainActivity extends com.wizarpos.activity.ConstantActivity impleme
                     e.printStackTrace();
                 } finally {
                     MainActivity.this.unbindService(this);
-                    ;
                 }
             }
         });

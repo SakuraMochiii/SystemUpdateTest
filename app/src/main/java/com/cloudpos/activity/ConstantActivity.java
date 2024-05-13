@@ -1,4 +1,4 @@
-package com.wizarpos.activity;
+package com.cloudpos.activity;
 
 import android.app.Activity;
 import android.os.Handler;

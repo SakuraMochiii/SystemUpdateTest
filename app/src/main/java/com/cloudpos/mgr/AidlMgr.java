@@ -1,4 +1,4 @@
-package com.wizarpos.mgr;
+package com.cloudpos.mgr;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -11,7 +11,6 @@ public class AidlMgr {
 
     public static final String TAG = AidlMgr.class.getSimpleName();
 
-    public static final String DESC_SCAN_SERVICE = "com.cloudpos.scanserver.aidl.IScanService";
 
     private AidlMgr() {
     }
@@ -40,8 +39,8 @@ public class AidlMgr {
 
     //	public boolean startBindScanService(Context mContext, ServiceConnection connection) {
 //		ComponentName comp = new ComponentName(
-//				"com.cloudpos.scanserver",
-//				"com.cloudpos.scanserver.service.ScannerService");
+//				"com.wizarpos.scanserver",
+//				"com.wizarpos.scanserver.service.ScannerService");
 //		boolean isSuccess = startConnectService(mContext,comp, connection);
 //		Log.d(TAG, "bind scanner service");
 //		return isSuccess;
