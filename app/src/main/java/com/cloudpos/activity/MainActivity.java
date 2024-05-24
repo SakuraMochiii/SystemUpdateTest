@@ -101,7 +101,7 @@ public class MainActivity extends com.cloudpos.activity.ConstantActivity impleme
                 try {
                     writerInLog("The upgrade process has be started");
                     int result = sysUpdateService.updateSystem("/sdcard/test.zip");
-                    writerInLog("The upgrade process has be finshed， result is " + result);
+                    writerInLog("The upgrade process has be finshed, result is " + result);
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 } finally {
