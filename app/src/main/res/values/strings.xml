@@ -6,8 +6,8 @@
 
     <string name="logcat_output">logcat output</string>
     <string name="logcat_clear">logcat clear</string>
-    <string name="interval_format_error">The format of interval-time is error!</string>
-    <string name="introduction">Introduction\n Https demo</string>
+    <string name="interval_format_error">The format of interval-time is incorrect!</string>
+    <string name="introduction">Introduction\nHttps demo</string>
 
     <string name="autotest_run3">Upgrade Firmware</string>
     <string name="autotest_run4">None</string>

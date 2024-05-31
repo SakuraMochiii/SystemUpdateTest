@@ -10,7 +10,7 @@ public class MessageUtil {
     private static final String TAG = MessageUtil.class.getSimpleName();
 
     /**
-     * 消息加密
+     * Message encryption
      */
     public static byte[] encryptByKey(byte[] data, Key key) {
         try {
@@ -25,7 +25,7 @@ public class MessageUtil {
     }
 
     /**
-     * 消息解密
+     * Message decryption
      */
     private static byte[] decryptByKey(byte[] data, Key key) {
         try {
@@ -37,6 +37,4 @@ public class MessageUtil {
             return null;
         }
     }
-
-
 }

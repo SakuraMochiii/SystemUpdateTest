@@ -99,9 +99,9 @@ public class MainActivity extends com.cloudpos.activity.ConstantActivity impleme
             public void onServiceConnected(ComponentName name, IBinder service) {
                 IPosSystemService sysUpdateService = IPosSystemService.Stub.asInterface(service);
                 try {
-                    writerInLog("The upgrade process has be started");
+                    writerInLog("The upgrade process has started");
                     int result = sysUpdateService.updateSystem("/sdcard/test.zip");
-                    writerInLog("The upgrade process has be finshed, result is " + result);
+                    writerInLog("The upgrade process has finished, the result is " + result);
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 } finally {
@@ -109,7 +109,7 @@ public class MainActivity extends com.cloudpos.activity.ConstantActivity impleme
                 }
             }
         });
-        writerInLog("start bind service , success is " + result);
+        writerInLog("start bind service, success is " + result);
     }
 
     @Override
