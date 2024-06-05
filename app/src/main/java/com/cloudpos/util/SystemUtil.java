@@ -42,10 +42,10 @@ public class SystemUtil {
     }
 
     /**
-     * 当前activity是否在前台
+     * Whether the current activity is in the foreground
      *
-     * @param context : 当前activity
-     * @return 结果
+     * @param context : current activity
+     * @return result
      */
     public static boolean isRunningForeground(Context context, String packageName) {
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -58,9 +58,9 @@ public class SystemUtil {
     }
 
     /**
-     * 获取版本号
+     * Get version number
      *
-     * @return 当前应用的版本号
+     * @return The version number of the current application
      */
     public static int getVersionCode(Context context) {
         try {
@@ -76,7 +76,7 @@ public class SystemUtil {
     }
 
     /**
-     * 通过包名查看pid
+     * View pid by package name
      */
     public static String getPackageNameByPid(String pid, ActivityManager activityManager) {
         try {
@@ -84,24 +84,24 @@ public class SystemUtil {
             List<RunningAppProcessInfo> apps = activityManager.getRunningAppProcesses();
             for (RunningAppProcessInfo info : apps) {
                 if (info.pid == iPid) {
-                    Log.v(LOG_TAG, "pid 的包名" + info.processName);
+                    Log.v(LOG_TAG, "pid package name" + info.processName);
                     return info.processName;
                 }
             }
         } catch (Exception e) {
-            Log.v(LOG_TAG, "未能找到该" + pid + "对应的程序包名！");
+            Log.v(LOG_TAG, "Couldn't find " + pid + " corresponding package name!");
         }
         return null;
     }
 
     /**
-     * 查看是否是eng版本的系统。
+     * Check whether it is an eng version of the system.
      */
     public static boolean checkPosVersion() {
 //		com.cloudpos.android.core.util.POSSecurity.requireCheckCert()
         boolean isVerify = false;
         try {
-//			获得反射对象的类,加载指定的类
+//			Get the class of the reflection object and load the specified class
             Class<?> pOSSecurity = Class.forName("com.cloudpos.android.core.util.POSSecurity");
             Object resultObj = pOSSecurity.getMethod("requireCheckCert").invoke(pOSSecurity);
             Log.d(LOG_TAG, "checkPosVersion : resultObj = " + resultObj);
